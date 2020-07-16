@@ -1,7 +1,5 @@
 <template>
   <div>
-    <!-- <Vector />
-    <Header /> -->
     <div class="container">
       <About />
       <Cards />
