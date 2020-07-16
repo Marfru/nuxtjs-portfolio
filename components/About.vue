@@ -1,13 +1,14 @@
 <template>
   <div class="m-about">
-    <div class="m-about_container">
-      <h1>Hey there.</h1>
+    <div
+      v-for="about in aboutData"
+      :key="about.title"
+      class="m-about_container"
+    >
+      <h1>{{ about.title }}</h1>
       <p class="m-about_description">
-        My name is Marcos Frutos. I am a UX Engineer / Full Stack Designer.
+        {{ about.desc }}
       </p>
-      <!-- <p class="m-about_description">
-        <strong>{{ timestamp }} (GMT+2)</strong> - Rotterdam, Netherlands.
-      </p> -->
     </div>
   </div>
 </template>
@@ -18,6 +19,7 @@ export default {
   data() {
     return {
       timestamp: '',
+      aboutData: null,
     }
   },
 
@@ -25,6 +27,12 @@ export default {
     setInterval(() => {
       this.getNow()
     })
+  },
+
+  mounted() {
+    this.$axios
+      .$get('data/api.json')
+      .then((res) => (this.aboutData = res.about))
   },
 
   methods: {
