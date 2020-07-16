@@ -1,3 +1,5 @@
+const development = process.env.NODE_ENV !== 'production'
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -52,10 +54,22 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/proxy'],
 
   axios: {
-    // proxyHeaders: false
+    proxy: true,
+    baseURL: development
+      ? 'http://localhost:3000/api'
+      : 'https://marfru.com/api',
+  },
+
+  proxy: {
+    '/api': {
+      target: 'https://marfru.com',
+      pathRewrite: {
+        '^/api': '/',
+      },
+    },
   },
   /*
    ** Build configuration
