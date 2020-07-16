@@ -1,19 +1,8 @@
 <template>
   <nav class="m-menu_nav">
     <ul>
-      <li>
-        <a href="https://github.com/Marfru" target="_blank">Github</a>
-      </li>
-      <li>
-        <a href="https://codepen.io/markburns" target="_blank">Codepen</a>
-      </li>
-      <li>
-        <a href="/files/MarcosFrutos_CV_2020.pdf" target="_blank"
-          >CV / Resumé</a
-        >
-      </li>
-      <li>
-        <a href="mailto:hola@marfru.com">hola@marfru.com</a>
+      <li v-for="social in socials" :key="social">
+        <a href="social.url" target="_blank">{{ social.title }}</a>
       </li>
     </ul>
   </nav>
@@ -22,5 +11,15 @@
 <script>
 export default {
   name: 'Menu',
+
+  data() {
+    return {
+      socials: null,
+    }
+  },
+
+  mounted() {
+    this.$axios.$get('data/api.json').then((res) => (this.socials = res.ext))
+  },
 }
 </script>
