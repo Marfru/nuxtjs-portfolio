@@ -2,7 +2,7 @@
   <nav class="m-menu_nav">
     <ul>
       <li v-for="social in socials" :key="social">
-        <a href="social.url" target="_blank">{{ social.title }}</a>
+        <a :href="social.url" target="_blank">{{ social.title }}</a>
       </li>
     </ul>
   </nav>
