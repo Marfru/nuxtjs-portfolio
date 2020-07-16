@@ -1,0 +1,20 @@
+export default {
+  base: 'https://polyfill.io/v3/polyfill.min.js?flags=gated&features=',
+  features: [
+    'default',
+    'es5',
+    'es6',
+    'es7',
+    'es2015',
+    'es2016',
+    'es2017',
+    'Array.prototype.includes',
+    'Promise.prototype.finally',
+    'Array.prototype.flatMap',
+    'fetch',
+    'Proxy',
+    'Object.entries',
+    'Object.values',
+    'IntersectionObserver',
+  ].join('%2C'),
+}

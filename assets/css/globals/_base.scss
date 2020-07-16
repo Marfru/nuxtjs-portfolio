@@ -1,0 +1,18 @@
+html {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-grey m-0;
+}
+
+strong {
+  @apply font-bold;
+}
+
+.container {
+  @apply mx-auto;
+  -webkit-box-align: center;
+}

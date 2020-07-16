@@ -1,0 +1,32 @@
+$screenSizes: (
+    xsm:     config("screens.xsm"),
+    sm:      config("screens.sm"),
+    md:      config("screens.md"),
+    lg:      config("screens.lg"),
+    xl:      config("screens.xl"),
+    2xl:     config("screens.2xl"),
+
+    tablet:  config("screens.md"),
+    laptop:  config("screens.lg"),
+    desktop: config("screens.xl"),
+);
+
+@function getScreenSize($map, $size) {
+    @if map-has-key($map, $size) == true {
+        @return map-get($map, $size);
+    } @else {
+        @error "Screen size '#{$size}' not found in the given map: #{$map}";
+    }
+}
+
+@mixin from($device) {
+    @media screen and (min-width: getScreenSize($screenSizes, $device)) {
+        @content;
+    }
+}
+
+@mixin to($device) {
+    @media screen and (max-width: getScreenSize($screenSizes, $device)) {
+        @content;
+    }
+}

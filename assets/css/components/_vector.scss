@@ -1,0 +1,8 @@
+.m-vector {
+  @apply absolute top-0 left-0;
+  z-index: -1;
+
+  @media only screen and (max-width: 768px) {
+    @apply w-1/2;
+  }
+}

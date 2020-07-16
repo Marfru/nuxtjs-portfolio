@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Rubik', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  @apply font-bold;
+}
+
+h1 {
+  @apply text-6xl;
+  @media only screen and (max-width: 1280px) {
+    @apply text-5xl;
+  }
+}
+
+h2 {
+  @apply text-4xl leading-snug;
+  
+  @media only screen and (max-width: 1280px) {
+    @apply text-3xl;
+  }
+
+
+}
+
+p {
+  @apply font-light text-sm;
+}

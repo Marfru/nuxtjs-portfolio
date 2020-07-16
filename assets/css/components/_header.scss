@@ -1,0 +1,15 @@
+.m-header {
+  @apply flex items-start justify-start w-full box-border pt-12 pl-12;
+
+  &_social {
+    @apply mt-4;
+
+    &-link {
+      @apply text-lg text-purple;
+
+      &:not(:first-child) {
+        @apply ml-8;
+      }
+    }
+  }
+}

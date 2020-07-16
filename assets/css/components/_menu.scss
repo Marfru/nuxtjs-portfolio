@@ -1,0 +1,66 @@
+.m-menu {
+  &_icon {
+    @apply ml-auto mr-12;
+    z-index: 10;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  &_hamburger {
+    @apply relative flex cursor-pointer outline-none;
+    height: 80px;
+    width: 80px;
+  
+    &:before,
+    &:after {
+      @apply absolute bg-purple;
+      content: "";
+      top: 32px;
+      left: 20px;
+      width: 40px;
+      height: 4px;
+      transition: transform 300ms ease-out;
+    }
+  
+    &:after {
+      @apply top-auto;
+      bottom: 32px;
+    }
+
+    &:focus {
+      @apply outline-none;
+    }
+  
+    &--is-open {
+      &:before {
+        @apply bg-white;
+        transform: translateY(6px) rotate(135deg);
+      }
+      &:after {
+        @apply bg-white;
+        transform: translateY(-6px) rotate(45deg);
+      }
+    }
+  }
+
+  &_nav {
+    @apply bg-purple w-full h-full absolute top-0 left-0 flex justify-center items-center;
+
+    ul {
+      @apply text-center w-full;
+
+      li {
+        a {
+          @apply block w-full py-12 text-white text-2xl;
+
+          &:hover {
+            @apply bg-white text-purple;
+          }
+        }
+      }
+    }
+  }
+}
