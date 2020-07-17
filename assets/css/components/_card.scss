@@ -1,7 +1,7 @@
 .m-card {
   @apply flex flex-row box-border justify-between;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     @apply flex-col;
   }
     
@@ -12,7 +12,7 @@
     background-image:linear-gradient(to bottom right,$purple 49.5%,$white 50%);
     background-size: 200% 200%;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 1024px) {
       @apply mx-10;
 
       &:not(:first-child) {

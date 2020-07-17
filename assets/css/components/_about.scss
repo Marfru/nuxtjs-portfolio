@@ -1,6 +1,10 @@
 .m-about {
   @apply mx-auto flex flex-row justify-end box-border pt-8 mt-16;
 
+  @media only screen and (max-width: 1024px) {
+    @apply mx-10 justify-end;
+  }
+
   @media only screen and (max-width: 768px) {
     @apply mx-10 justify-start;
   }

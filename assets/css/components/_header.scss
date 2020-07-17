@@ -4,6 +4,7 @@
 
   @media only screen and (max-width: 768px) {
     @apply pt-6;
+    min-height: 100px;
   }
 
   &_social {
