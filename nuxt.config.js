@@ -6,6 +6,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-mode
    */
   mode: 'spa',
+
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
@@ -62,6 +63,7 @@ export default {
     '@nuxtjs/proxy',
     '@nuxtjs/component-cache',
     'nuxt-compress',
+    'nuxt-purgecss',
   ],
 
   '@nuxtjs/component-cache': {
