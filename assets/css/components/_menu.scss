@@ -3,6 +3,10 @@
     @apply ml-auto mr-12;
     z-index: 10;
 
+    @media only screen and (max-width: 768px) {
+      @apply mr-6 -mt-2;
+    }
+
     &:focus {
       outline: none;
       box-shadow: none;
@@ -12,7 +16,7 @@
   &_hamburger {
     @apply relative flex cursor-pointer outline-none;
     height: 80px;
-    width: 80px;
+    width: 70px;
   
     &:before,
     &:after {
@@ -20,7 +24,7 @@
       content: "";
       top: 32px;
       left: 20px;
-      width: 40px;
+      width: 30px;
       height: 4px;
       transition: transform 300ms ease-out;
     }
