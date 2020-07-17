@@ -1,7 +1,7 @@
 <template>
   <header class="m-header">
     <Logo />
-    <button class="m-menu_icon" @click="showMenu">
+    <button class="m-menu_icon" aria-label="Right Align" @click="showMenu">
       <Hamburger />
     </button>
     <transition name="fade">
