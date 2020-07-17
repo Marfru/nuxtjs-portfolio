@@ -57,7 +57,16 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/axios', '@nuxtjs/proxy', 'nuxt-compress'],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy',
+    '@nuxtjs/component-cache',
+    'nuxt-compress',
+  ],
+
+  '@nuxtjs/component-cache': {
+    maxAge: 1000 * 60 * 60,
+  },
 
   'nuxt-compress': {
     gzip: {
