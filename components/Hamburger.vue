@@ -1,9 +1,9 @@
 <template>
-  <button
+  <div
     class="m-menu_hamburger"
-    :class="hamburgerOpen ? 'm-menu_hamburger--is-open' : 'xxx'"
+    :class="hamburgerOpen ? 'm-menu_hamburger--is-open' : ''"
     @click="hamburgerOpen = !hamburgerOpen"
-  ></button>
+  ></div>
 </template>
 
 <script>
