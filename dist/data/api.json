@@ -1,0 +1,43 @@
+{
+  "about":[
+    {
+       "title":"Hey there.",
+       "desc":"My name is Marcos Frutos. I am a UX Engineer / Full Stack Designer."
+    }
+ ],
+  "data":[
+     {
+        "title":"User Experience.",
+        "desc":"Following a clear path in Product Definition, Research, Analysis, Design and Validation. Taking into account Accesibility and Performance.",
+        "url":"Read More soon"
+     },
+     {
+        "title":"User Interface.",
+        "desc":"Wireframes, Mock-ups and prototypes using modern design tools such as Figma, Sketch or Framer.",
+        "url":"Read More soon"
+     },
+     {
+        "title":"UX Engineering.",
+        "desc":"Front-End Development with modern stack such as Vue or React, and building Design Component Systems.",
+        "url":"Read More soon"
+     }
+  ],
+  "ext":[
+     {
+        "title":"Github",
+        "url":"https://github.com/Marfru"
+     },
+     {
+        "title":"Codepen",
+        "url":"https://codepen.io/markburns"
+      },
+   {
+    "title":"CV / Resumé",
+    "url":"/files/MarcosFrutos_CV_2020.pdf"
+ },
+ {
+  "title":"hola@marfru.com",
+  "url":"mailto:hola@marfru.com"
+}
+  ]
+}
