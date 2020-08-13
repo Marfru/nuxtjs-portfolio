@@ -64,6 +64,12 @@ export default {
     '@nuxtjs/component-cache',
     'nuxt-compress',
     'nuxt-purgecss',
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-57049848-1',
+      },
+    ],
   ],
 
   '@nuxtjs/component-cache': {
